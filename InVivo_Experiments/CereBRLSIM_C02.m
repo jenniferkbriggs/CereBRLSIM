@@ -1,4 +1,4 @@
-function [dy] = cerebralbloodflow_Mex(t,y,paramvals,Pres, etco2, pao2, pbto2) %#codegen
+function [dy] = CereBRLSIM_CO2(t,y,paramvals,Pres, etco2, pao2, pbto2) %#codegen
 %% -----------------------------------------------------------------------------
 % Cerebral Blood Flow with temporaly informed cerebral vascular regulation paramters 
 % Model is original but was motivated by Ursino and Lodi 1998
