@@ -1,24 +1,12 @@
-%Run Experiment to replicate Mahony and Evans:
+%Run Experiment to model dCA
 clear all
 close all
 clc
 
-try
-    cd('/Users/jkbriggs/Library/CloudStorage/OneDrive-TheUniversityofColoradoDenver/Anschutz/Albers/CVTR_Model/TympkoData/CSV_data/ThighCuff')
-catch
-    cd('~/OneDrive - The University of Colorado Denver/Anschutz/Albers/CVTR_Model/TympkoData/CSV_data/ThighCuff')
-end
-addpath('~/Documents/GitHub/CA_Hemodynamics/Code/')
-
-
-
-lagon = 1
+lagon = 1; %whether or not to lag between ABP to match blood velocity
 filename = '07'
-Data = readmatrix(['Control_Sun_' filename '_SQ_ABP.csv']);
-Flow = readmatrix(['Control_Sun_' filename '_SQ_v.csv']);
-
-
-addpath("~/Documents/GitHub/UniversalCode/")
+Data = readmatrix(['SQ_ABP.csv']); %First row is time, second row is ABP in mmHg
+Flow = readmatrix(['SQ_v.csv']);   %First row is time, second row is blood velocity
 
 %-- set paramvals:
 paramvals = [0.10, 5.07, 2.5, 40, 25, 1, 1, 1, 0, 40, 0.5, 7000, 12.5, 0];
