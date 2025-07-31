@@ -1,4 +1,4 @@
-% Reproducing KleinDepreiteri2022 Quadraphic Curve study
+% Reproducing Klein 2022 https://pubmed.ncbi.nlm.nih.gov/34935426/ Quadraphic Curve study
 clear all
 clc
 
@@ -90,7 +90,9 @@ end
 try % if data are present, plot and load them. 
 
 
-% Load data
+% Load data -- THESE DATA ARE JUST EXTRACTED FROM
+% https://pubmed.ncbi.nlm.nih.gov/34935426/ --- to plot on top of simulated
+% data
 RBCFlux = readmatrix('RBCFlux_medium.csv');
 Diameter = readmatrix('Diameter_medium.csv');
 
